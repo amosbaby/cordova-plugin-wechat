@@ -1,6 +1,6 @@
 //
 //  CDVWechat.m
-//  cordova-plugin-wechat
+//  cordova-plugin-amos-wechat
 //
 //  Created by xu.li on 12/23/13.
 //
@@ -20,7 +20,7 @@ static int const MAX_THUMBNAIL_SIZE = 320;
         self.wechatAppId = appId;
         [WXApi registerApp: appId];
         
-        NSLog(@"cordova-plugin-wechat has been initialized. Wechat SDK Version: %@. APP_ID: %@.", [WXApi getApiVersion], appId);
+        NSLog(@"cordova-plugin-amos-wechat has been initialized. Wechat SDK Version: %@. APP_ID: %@.", [WXApi getApiVersion], appId);
     }
 }
 
@@ -169,7 +169,7 @@ static int const MAX_THUMBNAIL_SIZE = 320;
     req.nonceStr = [params objectForKey:requiredParams[3]];
     req.package = @"Sign=WXPay";
     req.sign = [params objectForKey:requiredParams[4]];
-
+    req.openID = self.wechatAppId;
     if ([WXApi sendReq:req])
     {
         // save the callback id

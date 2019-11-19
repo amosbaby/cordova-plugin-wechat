@@ -1,6 +1,6 @@
 ![Active](https://www.repostatus.org/badges/latest/active.svg)
-![Downloads](https://img.shields.io/npm/dt/cordova-plugin-wechat.svg)
-![version](https://img.shields.io/npm/v/cordova-plugin-wechat/latest.svg)
+![Downloads](https://img.shields.io/npm/dt/cordova-plugin-amos-wechat.svg)
+![version](https://img.shields.io/npm/v/cordova-plugin-amos-wechat/latest.svg)
 
 # 关于
 
@@ -14,11 +14,11 @@
 
 [ionic3 demo](https://github.com/jasonz1987/ionic3-wechat-sdk-demo)
 
-[ionic1/2 demo](https://github.com/xu-li/cordova-plugin-wechat-example)
+[ionic1/2 demo](https://github.com/xu-li/cordova-plugin-amos-wechat-example)
 
 # 安装
 
-1. ```cordova plugin add cordova-plugin-wechat  --variable wechatappid=YOUR_WECHAT_APPID```, or using [plugman](https://npmjs.org/package/plugman), [phonegap](https://npmjs.org/package/phonegap), [ionic](http://ionicframework.com/)
+1. ```cordova plugin add cordova-plugin-amos-wechat  --variable wechatappid=YOUR_WECHAT_APPID```, or using [plugman](https://npmjs.org/package/plugman), [phonegap](https://npmjs.org/package/phonegap), [ionic](http://ionicframework.com/)
 
 2. ```cordova build ios``` or ```cordova build android```
 
@@ -122,7 +122,7 @@ Wechat.share({
 
 ## 发送支付请求
 ```Javascript
-// See https://github.com/xu-li/cordova-plugin-wechat-example/blob/master/server/payment_demo.php for php demo
+// See https://github.com/xu-li/cordova-plugin-amos-wechat-example/blob/master/server/payment_demo.php for php demo
 var params = {
     partnerid: '10000100', // merchant id
     prepayid: 'wx201411101639507cbf6ffd8b0779950874', // prepay id
@@ -173,7 +173,7 @@ Wechat.openMiniProgram(params,function(data){
 
 # FAQ
 
-See [FAQ](https://github.com/xu-li/cordova-plugin-wechat/wiki/FAQ).
+See [FAQ](https://github.com/xu-li/cordova-plugin-amos-wechat/wiki/FAQ).
 
 QQ群：190808518  [![cordova-wechat官方交流群](https://pub.idqqimg.com/wpa/images/group.png)](http://shang.qq.com/wpa/qunwpa?idkey=8279476de172cacb72a51a5630744316c0069620ad8b33be3abee243af2cc001)
 

@@ -1,8 +1,8 @@
 ![Active](https://www.repostatus.org/badges/latest/active.svg)
-![Downloads](https://img.shields.io/npm/dt/cordova-plugin-wechat.svg)
-![version](https://img.shields.io/npm/v/cordova-plugin-wechat/latest.svg)
+![Downloads](https://img.shields.io/npm/dt/cordova-plugin-amos-wechat.svg)
+![version](https://img.shields.io/npm/v/cordova-plugin-amos-wechat/latest.svg)
 
-# cordova-plugin-wechat
+# cordova-plugin-amos-wechat
 
 A cordova plugin, a JS version of Wechat SDK
 
@@ -21,7 +21,7 @@ A cordova plugin, a JS version of Wechat SDK
 # Install
 
 ```shell
-cordova plugin add cordova-plugin-wechat  --variable wechatappid=YOUR_WECHAT_APPID
+cordova plugin add cordova-plugin-amos-wechat --variable wechatappid=YOUR_WECHAT_APPID
 ```
 
 ```shell
@@ -128,7 +128,7 @@ Wechat.share({
 
 ## Send payment request
 ```Javascript
-// See https://github.com/xu-li/cordova-plugin-wechat-example/blob/master/server/payment_demo.php for php demo
+// See https://github.com/xu-li/cordova-plugin-amos-wechat-example/blob/master/server/payment_demo.php for php demo
 var params = {
     partnerid: '10000100', // merchant id
     prepayid: 'wx201411101639507cbf6ffd8b0779950874', // prepay id
