@@ -14,12 +14,11 @@ static int const MAX_THUMBNAIL_SIZE = 320;
 
 #pragma mark "API"
 - (void)pluginInitialize {
-    NSString* appId = [[self.commandDelegate settings] objectForKey:@"wechatappid"];
-
-    if (appId && ![appId isEqualToString:self.wechatAppId]) {
+   NSString* appId = [[self.commandDelegate settings] objectForKey:@"wechatappid"];
+   NSString* universallink = [[self.commandDelegate settings] objectForKey:@"universallink"];
+   if (appId && ![appId isEqualToString:self.wechatAppId]) {
         self.wechatAppId = appId;
-        [WXApi registerApp: appId];
-        
+        [WXApi registerApp:appId universalLink:universallink];
         NSLog(@"cordova-plugin-amos-wechat has been initialized. Wechat SDK Version: %@. APP_ID: %@.", [WXApi getApiVersion], appId);
     }
 }

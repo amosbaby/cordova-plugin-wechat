@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     xmlns:rim="http://www.blackberry.com/ns/widgets" 
-    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-amos-wechat" version="0.0.1">
+    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-amos-wechat" version="0.0.10">
 
     <name>Wechat</name>
     <description>A cordova plugin, a JS version of Wechat SDK</description>
@@ -14,7 +14,7 @@
     <!-- add this to your config.xml -->
     <!-- <preference name="WECHATAPPID" value="YOUR_WECHAT_APP_ID_HERE" /> -->
     <preference name="WECHATAPPID" />
-
+    <preference name="UNIVERSALLINK" />
     <!-- js module-->
     <js-module src="www/wechat.js" name="Wechat">
         <clobbers target="Wechat" />
@@ -28,12 +28,14 @@
                 <param name="onload" value="true" />
             </feature>
             <preference name="WECHATAPPID" value="$WECHATAPPID"/>
+            <preference name="UNIVERSALLINK" value="$UNIVERSALLINK"/>
         </config-file>
 
         <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
             <array>
                 <string>weixin</string>
                 <string>wechat</string>
+                <string>weixinULAPI</string>
             </array>
         </config-file>
 
@@ -63,9 +65,9 @@
         <source-file src="src/ios/CDVWechat.m" />
 
         <!-- Wechat Official -->
-        <header-file src="src/ios/libs/OpenSDK1.8.0/WXApi.h" />
-        <header-file src="src/ios/libs/OpenSDK1.8.0/WXApiObject.h" />
-        <source-file src="src/ios/libs/OpenSDK1.8.0/libWeChatSDK.a" framework="true" />
+        <header-file src="src/ios/libs/OpenSDK1.8.6.1/WXApi.h" />
+        <header-file src="src/ios/libs/OpenSDK1.8.6.1/WXApiObject.h" />
+        <source-file src="src/ios/libs/OpenSDK1.8.6.1/libWeChatSDK.a" framework="true" />
 
         <!-- Other required frameworks -->
         <framework src="libz.tbd" />
