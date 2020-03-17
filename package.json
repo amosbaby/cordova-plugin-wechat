@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-amos-wechat",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A cordova plugin, a JS version of Wechat SDK",
   "cordova": {
     "id": "cordova-plugin-amos-wechat",
