@@ -320,7 +320,6 @@ public class Wechat extends CordovaPlugin {
             req.timeStamp = params.getString("timestamp");
             req.sign = params.getString("sign");
             req.packageValue = "Sign=WXPay";
-            req.appid = params.getString("appid");
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
 
